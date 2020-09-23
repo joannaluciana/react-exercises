@@ -3,10 +3,19 @@ import codeBrainersStudents from "../models/Students";
 import Student from "./Student";
 
 const StudentList = () => {
-    debugger;
+    console.log(codeBrainersStudents);
 
     return (
-        <ul>
+
+
+        <table>
+            <thead>
+            <tr>
+                <td> Student </td>
+                <td> Coffees </td>
+            </tr>
+
+            </thead>
             {
                 codeBrainersStudents.map((student, index) =>
                     <Student
@@ -16,7 +25,7 @@ const StudentList = () => {
                     />
                 )
             }
-        </ul>
+        </table>
     );
 };
 
