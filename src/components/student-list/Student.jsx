@@ -6,6 +6,7 @@ const Student = (props) => {
     const studentCoffees = props.studentCoffees;
     const divStyle = {
     paddingLeft: studentCoffees + 'em',
+        backgroundColor: studentCoffees==0 ? 'red' : 'pink',
 };
 
 
