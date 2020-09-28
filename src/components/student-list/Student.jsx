@@ -5,26 +5,25 @@ const Student = (props) => {
     const studentName = props.studentName;
     const studentCoffees = props.studentCoffees;
 
-    function getBackgroundColor(studentCoffees) {
-      const g = 100;
-      const b = 200;
-      const r = studentCoffees * 25.5;
 
-      const backgroundColor = 'rgb ($ {r}, $ {g}, $ {b})';
-      return backgroundColor;
+    function LimitRange (x, min, max ) {
+      return Math.min(Math.max(Math.round(x),min), max);
+    }
+
+
+    function getCoffeeClassName(coffees) {
+      coffees = LimitRange(coffees, 0, 10);
+      return 'coffee'+coffees;
 
     }
 
-    const divStyle = {
-        paddingLeft: studentCoffees + 'em',
-        backgroundColor: getBackgroundColor(studentCoffees),
-    };
+    const className = 'student'+' '+ getCoffeeClassName(studentCoffees);
 
 
     return (
         <tr>
             <td>
-                <div className='student' style={divStyle}>
+                <div className={className}>
                     {studentName}
                 </div>
             </td>
