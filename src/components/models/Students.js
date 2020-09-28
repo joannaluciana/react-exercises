@@ -6,7 +6,7 @@ const codeBrainersStudents = [
   },
   {
     name: 'Michał M.',
-    coffees: 1
+    coffees: 5
   },
   {
     name: 'Joanna',
@@ -18,7 +18,7 @@ const codeBrainersStudents = [
   },
   {
     name: 'Grzegorz',
-    coffees: 0
+    coffees: 8
   },
   {
     name: 'Damian',
@@ -31,7 +31,7 @@ const codeBrainersStudents = [
   },
   {
     name: 'Kamila',
-    coffees: 0
+    coffees: 7
   },
   {
     name: 'Maksym',
