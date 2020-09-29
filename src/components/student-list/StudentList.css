@@ -1,5 +1,11 @@
-.student-list-table .student-header, .name-header {
+.student-list-table .student-header {
 
   padding: 2em;
   background-color: aliceblue;
+
 }
+
+.student-cell-padding {
+  padding: 1em 2em;
+}
+

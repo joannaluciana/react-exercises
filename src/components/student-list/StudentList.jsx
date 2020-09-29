@@ -12,9 +12,9 @@ const StudentList = () => {
 
         <table className='student-list-table'>
             <thead>
-            <tr>
-                <th className='student-header'> Student </th>
-                <th className='name-header'> Coffees </th>
+            <tr >
+                <th className='student-header student-cell-padding'> Student </th>
+                <th className='student-header student-cell-padding'> Coffees </th>
             </tr>
 
             </thead>

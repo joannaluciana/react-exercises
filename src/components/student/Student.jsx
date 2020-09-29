@@ -2,6 +2,7 @@ import React from "react";
 import './Student.css';
 
 
+
 const Student = (props) => {
     const studentName = props.studentName;
     const studentCoffees = props.studentCoffees;
@@ -22,13 +23,13 @@ const Student = (props) => {
 
 
     return (
-        <tr>
-            <td>
+        <tr className='student-row'>
+            <td className='student-cell student-cell-padding'>
                 <div className={className}>
                     {studentName}
                 </div>
             </td>
-            <td> {studentCoffees} </td>
+            <td className='student-cell student-cell-padding student-cell-center'> {studentCoffees} </td>
         </tr>
     );
 };
