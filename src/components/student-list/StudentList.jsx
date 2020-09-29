@@ -1,6 +1,8 @@
 import React from "react";
 import codeBrainersStudents from "../models/Students";
-import Student from "./Student";
+import Student from "../student/Student";
+import './StudentList.css';
+
 
 const StudentList = () => {
     console.log(codeBrainersStudents);
@@ -8,11 +10,11 @@ const StudentList = () => {
     return (
 
 
-        <table>
+        <table className='student-list-table'>
             <thead>
             <tr>
-                <td> Student </td>
-                <td> Coffees </td>
+                <th className='student-header'> Student </th>
+                <th className='name-header'> Coffees </th>
             </tr>
 
             </thead>
