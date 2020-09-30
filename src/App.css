@@ -3,15 +3,37 @@
 
 }
 
+.d-flex {
+  display: flex;
+}
+p-1{
+  padding-top: 0.5em;
+}
+
+.button {
+  padding: 0.5em 1em;
+}
+
 h1 {
     padding-left: 4em;
 
 
 }
-
+.students-actions {
+  padding-left: 2em;
+}
 h1.small {
     padding-left: 4em;
     font-size: inherit;
 
 }
+
+.student-lists-container {
+  display: flex;
+
+}
+
+.student-list-table{
+    margin-left: 1rem;
+  }
 

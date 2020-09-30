@@ -5,7 +5,7 @@ import './StudentList.css';
 
 
 const StudentList = () => {
-    console.log(codeBrainersStudents);
+
 
     return (
 
@@ -18,15 +18,16 @@ const StudentList = () => {
             </tr>
 
             </thead>
+          <tbody>
             {
-                codeBrainersStudents.map((student, index) =>
+                codeBrainersStudents.map(student =>
                     <Student
-                    key = { index }
+                    key = { student.id }
                     studentName = {student.name}
-                    studentCoffees = {student.coffees}
                     />
                 )
             }
+            </tbody>
         </table>
     );
 };

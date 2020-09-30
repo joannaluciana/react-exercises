@@ -1,37 +1,38 @@
-import React from "react";
+import React from 'react';
 import './Student.css';
 
-
-
 const Student = (props) => {
-    const studentName = props.studentName;
-    const studentCoffees = props.studentCoffees;
+  const studentName = props.student.name;
+  const coffees = props.student.coffees;
+
+  function limitRange(x, min, max) {
+    return Math.min(Math.max(Math.round(x), min), max)
+  }
+
+  /**
+   * @param {number} coffees Number of coffees
+   * @return {string} Returns string like 'coffee0', 'coffee1', …, 'coffee10'
+   */
+  function getCoffeeClassName(coffees) {
+    coffees = limitRange(coffees, 0, 10);
+    return 'coffee' + coffees;
+  }
+
+  const className = 'student ' + getCoffeeClassName(coffees);
 
 
-    function LimitRange (x, min, max ) {
-      return Math.min(Math.max(Math.round(x),min), max);
-    }
 
-
-    function getCoffeeClassName(coffees) {
-      coffees = LimitRange(coffees, 0, 10);
-      return 'coffee'+coffees;
-
-    }
-
-    const className = 'student'+' '+ getCoffeeClassName(studentCoffees);
-
-
-    return (
-        <tr className='student-row'>
-            <td className='student-cell student-cell-padding'>
-                <div className={className}>
-                    {studentName}
-                </div>
-            </td>
-            <td className='student-cell student-cell-padding student-cell-center'> {studentCoffees} </td>
-        </tr>
-    );
+  return (
+    <tr className='student-row'>
+      <td className='student-cell student-cell-padding'>
+        <div className={ className } >
+          { studentName }
+        </div>
+      </td>
+      <td className='student-cell student-cell-padding student-cell-center'>{ coffees }</td>
+    </tr>
+  );
 };
+
 
 export default Student;
